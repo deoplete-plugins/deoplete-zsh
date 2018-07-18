@@ -24,7 +24,8 @@ class Source(Base):
         return m.start()
 
     def gather_candidates(self, context):
-        capture = globruntime(context['runtimepath'], 'bin/capture.zsh')
+        capture = globruntime(self.vim.options['runtimepath'],
+                              'bin/capture.zsh')
         if not self.__executable_zsh or not capture or not context['input']:
             return []
 
