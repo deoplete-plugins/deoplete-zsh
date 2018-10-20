@@ -35,7 +35,7 @@ class Source(Base):
                            for x in subprocess.check_output(
                                ['zsh', capture[0], context['input']],
                                cwd=self.vim.call('getcwd'),
-                               timeout=0.5).splitlines()]:
+                               timeout=1.0).splitlines()]:
                 if len(pieces) > 1:
                     result.append({ 'word': pieces[0], 'menu': pieces[1] })
                 else:
