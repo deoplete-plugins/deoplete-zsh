@@ -43,10 +43,15 @@ comppostfuncs=( null-line exit )
 
 # never group stuff!
 zstyle '':completion:*'' list-grouped false
+zstyle '':completion:*'' force-list always
 # don''t insert tab when attempting completion on empty line
 zstyle '':completion:*'' insert-tab false
 # no list separator, this saves some stripping later on
 zstyle '':completion:*'' list-separator ''''
+# for list even if too many
+zstyle '':completion:*'' list-prompt   ''''
+zstyle '':completion:*'' select-prompt ''''
+zstyle '':completion:*'' menu true
 
 # we use zparseopts
 zmodload zsh/zutil
