@@ -1,8 +1,8 @@
 import re
 import subprocess
 
+from deoplete.base.source import Base
 from deoplete.util import globruntime
-from .base import Base
 
 
 class Source(Base):
